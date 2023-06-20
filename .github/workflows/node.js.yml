@@ -38,4 +38,4 @@ jobs:
       run: |
           echo "${{ secrets.AUTHKEY_RAJESH}}" > 5822_authkey_Rajesh.pem && chmod 400 roshan_auth_key.pem
           sleep 60
-          sudo scp -o StrictHostKeyChecking=no -i roshan_auth_key.pem -r dist/todo/* ubuntu@$HOSTNAME:/var/www/html
+          sudo scp -o StrictHostKeyChecking=no -i 5822_authkey_Rajesh.pem -r dist/todo/* ubuntu@$HOSTNAME:/var/www/html
