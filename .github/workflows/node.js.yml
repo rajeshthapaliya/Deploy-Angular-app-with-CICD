@@ -40,6 +40,6 @@ jobs:
     
     - name: Build & Deploy
       run: |
-          echo "${{ secrets.AUTHKEY_RAJESH}}" > 5822_authkey_Rajesh.pem && chmod 400 5822_authkey_Rajesh.pem
+          echo "${{ secrets.AUTHKEY_RAJESH }}" > 5822_authkey_Rajesh.pem && chmod 400 5822_authkey_Rajesh.pem
           sleep 60
           sudo scp -o StrictHostKeyChecking=no -i 5822_authkey_Rajesh.pem -r dist/todo/* ubuntu@52.87.181.205:/var/www/html
